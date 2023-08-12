@@ -10,17 +10,19 @@ public class FileInfo {
     private SimpleStringProperty URL=new SimpleStringProperty();
     private SimpleStringProperty Status=new SimpleStringProperty();
     private SimpleStringProperty path=new SimpleStringProperty();
+    private SimpleStringProperty per=new SimpleStringProperty();
 //    private DownloadManager downloadManagerController;
 // action
 
     private SimpleStringProperty action;
 
-    public FileInfo(String Index, String name, String URL, String Status, String action, String path) {
+    public FileInfo(String Index, String name, String URL, String Status,String per, String action, String path) {
         this.Index.set(Index);
         this.name.set(name);
         this.URL.set(URL);
         this.Status.set(Status);
         this.path.set(path);
+        this.per.set(per);
 
     }
 
@@ -74,6 +76,18 @@ public class FileInfo {
 
     public String getAction() {
         return action.get();
+    }
+
+    public String getPer() {
+        return per.get();
+    }
+
+    public SimpleStringProperty perProperty() {
+        return per;
+    }
+
+    public void setPer(String per) {
+        this.per.set(per);
     }
 
     public SimpleStringProperty actionProperty() {
